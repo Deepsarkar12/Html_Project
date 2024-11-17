@@ -1,0 +1,54 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: crimson;
+}
+
+.jumbotron {
+    background: url('Cook.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+}
+
+.rest{
+    color: rgb(13, 49, 63);
+    background-color: white; 
+    border-radius: 10%;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+#about{
+    background-color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Add zoom effect to the images in the menu */
+.card-img-top {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
+}
+
+/* Cart Section */
+#cartSection {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+#cartItems {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#cartCount {
+    font-weight: bold;
+}
+
+#checkoutButton {
+    margin-top: 20px;
+}
+

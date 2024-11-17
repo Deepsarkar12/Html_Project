@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAFKA's</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">KAFKA's</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Cart Section -->
+<div id="cartSection" class="container my-5" style="display: none;">
+    <h2 class="text-center">Your Cart</h2>
+    <ul id="cartItems" class="list-group">
+        <!-- Cart items will be listed here -->
+    </ul>
+    <p id="totalPrice" class="text-center"></p>
+    <button id="checkoutButton" class="btn btn-success btn-block">Checkout</button>
+</div>
+
+<!-- Home Section -->
+<section id="home" class="jumbotron text-center">
+    <div class="rest"> 
+        <h1 class="display-4">KAFKA's</h1>
+        <p class="lead">Experience the finest cuisine</p>
+    </div>
+    <a href="#menu" class="btn btn-primary btn-lg">View Menu</a>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="container my-5">
+    <h2 class="text-center">Our Menu</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="menu_card2.jpg" class="card-img-top" alt="Dish 1">
+                <div class="card-body">
+                    <h5 class="card-title">Classic English Breakfast</h5>
+                    <p class="card-text">Price: Rs. 150</p>
+                    <button class="btn btn-primary addToCart" data-name="Classic English Breakfast" data-price="150">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="menu_card1.jpg" class="card-img-top" alt="Dish 2">
+                <div class="card-body">
+                    <h5 class="card-title">French Toast</h5>
+                    <p class="card-text">Price: Rs. 120</p>
+                    <button class="btn btn-primary addToCart" data-name="French Toast" data-price="120">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="menu3.jpg" class="card-img-top" alt="Dish 3">
+                <div class="card-body">
+                    <h5 class="card-title">Pasta Primavera</h5>
+                    <p class="card-text">Price: Rs. 250</p>
+                    <button class="btn btn-primary addToCart" data-name="Pasta Primavera" data-price="250">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images.jpg" class="card-img-top" alt="Dish 4">
+                <div class="card-body">
+                    <h5 class="card-title">Vegetarian Burger</h5>
+                    <p class="card-text">Price: Rs. 200</p>
+                    <button class="btn btn-primary addToCart" data-name="Vegetarian Burger" data-price="200">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="Chicken-Mayo-Sandwich1-.jpg" class="card-img-top" alt="Dish 5">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Sandwich</h5>
+                    <p class="card-text">Price: Rs. 180</p>
+                    <button class="btn btn-primary addToCart" data-name="Chicken Sandwich" data-price="180">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="menue.jpg" class="card-img-top" alt="Dish 6">
+                <div class="card-body">
+                    <h5 class="card-title">Beef Steak</h5>
+                    <p class="card-text">Price: Rs. 350</p>
+                    <button class="btn btn-primary addToCart" data-name="Beef Steak" data-price="350">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+    <h2 class="text-center">About Us</h2>
+    <p class="text-center">
+        KAFKA's is a family-owned restaurant dedicated to providing the finest dining experience with a focus on fresh ingredients, creative flavors, and exceptional service. Established in 2005, our restaurant has been serving delicious and memorable meals that cater to all tastes, whether you're craving classic comfort food or seeking something more adventurous.
+        We believe in bringing people together over good food, and our menu reflects this commitment by offering a diverse selection of dishes inspired by both local and international cuisines.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center">Contact Us</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    &copy; 2024 KAFKA's. All rights reserved.
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
